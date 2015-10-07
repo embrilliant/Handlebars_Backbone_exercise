@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Purchase a Role</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+
+</head>
+<body>
+
+    <div id="container" class="container">
+        <div id="head-bar" class="col-sm-12">Purchase a Role</div>
+        <form>
+            <div id="product" class="row">
+                <ul id="product-list">
+                </ul>
+            </div>
+        </form>
+    </div>
+
+    <script id="tpl" type="text/template">
+        {{#each roles.roles}}
+        <li id="product-list-item{{select}}" class="col-sm-6 col-md-3">
+            <h4>{{type}}</h4>
+            <img src="{{image}}" alt="Photo of {{type}}">
+            <strong class='price'>{{price}} XRP</strong>
+            <input type='radio' name='role' value={{select}}>
+        </li>
+        {{/each}}
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+</body>
+</html>
